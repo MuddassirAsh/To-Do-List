@@ -180,7 +180,4 @@ anime.onload = function () {
 // open weather API
 
 
-//new change added 
-
-
-// first change
+// Test
