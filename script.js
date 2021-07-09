@@ -178,6 +178,8 @@ anime.onload = function () {
 
 
 // open weather API
+// theysaidso API
 
+// Philospher quotes API or Anime API or past presidents quotes
 
-// Test
+// how long does it take  create a curated listed of quotes is it manually done?
