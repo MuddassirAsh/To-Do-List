@@ -133,19 +133,15 @@ var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturda
 document.getElementById('greeting').innerHTML = 'Happy'+ ' ' + days[d.getDay()]+ " " +"☕️"
 
 
-// making a request to animechan API and outputing that request
-const anime = new XMLHttpRequest()
-anime.open('GET', 'https://animechan.vercel.app/api/random')
-anime.send()
-anime.responseType = 'json'
-const text = document.getElementById('text')
-
-anime.onload = function () {
-    var animeQuote = anime.response.quote
-    text.innerHTML = animeQuote
+function success(param) {
+    var crd = param.coords
+    var pos = param.timestamp
+    console.log(crd )
+    console.log(pos)
 }
 
 
+navigator.geolocation.getCurrentPosition(success)
 
 // --------------- Tasks Still Needing To Be Completed --------------- 
 
