@@ -84,3 +84,14 @@ span:active{
     left: 390px
     
 }
+
+#weatherdata{
+   position: absolute;
+   bottom: 685px;
+   left: 1330px;
+   font-size: 19px;
+   }
+
+#icon{
+    
+}

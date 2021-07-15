@@ -132,16 +132,28 @@ var d = new Date()
 var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 document.getElementById('greeting').innerHTML = 'Happy'+ ' ' + days[d.getDay()]+ " " +"☕️"
 
-
+const weatherdata = document.getElementById('weatherdata')
 function success(param) {
-    var crd = param.coords
-    var pos = param.timestamp
-    console.log(crd )
-    console.log(pos)
+    var lat = param.coords.latitude
+    var long = param.coords.longitude
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=498e78645413a462079b552fb2684491`)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+       var temperature = Math.round(data.main.temp)
+       var location = data.name
+       var icon = data.weather[0].icon
+     //  weatherdata.innerHTML ="<img src='https://openweathermap.org/img/wn/"+(icon)+ "@2x.png>" +
+      // "<strong id='temp'>"+ (temperature) + "°C </strong> </br>"+ (location)
+    })
 }
 
+navigator.geolocation.getCurrentPosition(success)   
 
-navigator.geolocation.getCurrentPosition(success)
+document.getElementById('test123').innerHTML = "<img src = https://openweathermap.org/img/wn/50n@2x.png alt=Weather Icon" + "hello"
+
 
 // --------------- Tasks Still Needing To Be Completed --------------- 
 
@@ -179,3 +191,5 @@ navigator.geolocation.getCurrentPosition(success)
 // Philospher quotes API or Anime API or past presidents quotes
 
 // how long does it take  create a curated listed of quotes is it manually done?
+
+// promises and callback functions 
