@@ -145,14 +145,15 @@ function success(param) {
        var temperature = Math.round(data.main.temp)
        var location = data.name
        var icon = data.weather[0].icon
-     //  weatherdata.innerHTML ="<img src='https://openweathermap.org/img/wn/"+(icon)+ "@2x.png>" +
-      // "<strong id='temp'>"+ (temperature) + "°C </strong> </br>"+ (location)
+         weatherdata.innerHTML = `<img id='weather-icon' src='https://openweathermap.org/img/wn/${icon}@2x.png' alt='Weather Icon'>
+        <strong id='temp'> ${temperature}°C</strong> <br> ${location}`
     })
 }
 
 navigator.geolocation.getCurrentPosition(success)   
 
-document.getElementById('test123').innerHTML = "<img src = https://openweathermap.org/img/wn/50n@2x.png alt=Weather Icon" + "hello"
+
+//'https://openweathermap.org/img/wn/50n@2x.png' alt='Weather Icon'
 
 
 // --------------- Tasks Still Needing To Be Completed --------------- 
@@ -193,3 +194,4 @@ document.getElementById('test123').innerHTML = "<img src = https://openweatherma
 // how long does it take  create a curated listed of quotes is it manually done?
 
 // promises and callback functions 
+// add media queries for dark mode

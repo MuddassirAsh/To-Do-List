@@ -86,12 +86,11 @@ span:active{
 }
 
 #weatherdata{
-   position: absolute;
-   bottom: 685px;
-   left: 1330px;
+   position: relative;
+   bottom: 99px;
+   left: 647px;
    font-size: 19px;
    }
 
-#icon{
-    
+#weather-icon{
 }
