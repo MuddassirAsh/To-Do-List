@@ -145,8 +145,8 @@ function success(param) {
        var temperature = Math.round(data.main.temp)
        var location = data.name
        var icon = data.weather[0].icon
-         weatherdata.innerHTML = `<img id='weather-icon' src='https://openweathermap.org/img/wn/${icon}@2x.png' alt='Weather Icon'>
-        <strong id='temp'> ${temperature}°C</strong> <br> ${location}`
+         weatherdata.innerHTML = `<img id='weather-icon' src='https://openweathermap.org/img/wn/${icon}@2x.png' alt='Weather Icon'> 
+        <strong id='temp'> ${temperature}°C</strong> <br> ${location}` 
     })
 }
 

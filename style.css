@@ -29,7 +29,7 @@ input[type='checkbox']{
     filter: opacity(50%);
     filter: hue-rotate(30deg);
     cursor: pointer;
-}
+    }
 
 /*
 input[type='checkbox']:checked ~
@@ -39,7 +39,6 @@ input[type='checkbox']:checked ~
     box-shadow: 0 0 0 3px orange;
 }
 */
-
 
 input[type='text'].dynamic-input{
     padding-left: 24px;
@@ -85,12 +84,17 @@ span:active{
     
 }
 
+.containerTwo{
+
+}
+
 #weatherdata{
    position: relative;
    bottom: 99px;
    left: 647px;
    font-size: 19px;
+   width: min-content;
    }
-
-#weather-icon{
-}
+  
+    #weather-icon{
+    }
