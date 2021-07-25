@@ -132,7 +132,9 @@ var d = new Date()
 var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 document.getElementById('greeting').innerHTML = 'Happy'+ ' ' + days[d.getDay()]+ " " +"☕️"
 
-const weatherdata = document.getElementById('weatherdata')
+const weathericon = document.getElementById('weather-icon')
+const weathertemp = document.getElementById('weather-temp')
+const weatherlocation = document.getElementById('weather-location')
 function success(param) {
     var lat = param.coords.latitude
     var long = param.coords.longitude
@@ -145,8 +147,9 @@ function success(param) {
        var temperature = Math.round(data.main.temp)
        var location = data.name
        var icon = data.weather[0].icon
-         weatherdata.innerHTML = `<img id='weather-icon' src='https://openweathermap.org/img/wn/${icon}@2x.png' alt='Weather Icon'> 
-        <strong id='temp'> ${temperature}°C</strong> <br> ${location}` 
+        weathericon.innerHTML = `<img id='weather-icon' src='https://openweathermap.org/img/wn/${icon}@2x.png' alt='Weather Icon'>`
+        weathertemp.innerHTML = `<strong id='temp'> ${temperature}°C </strong>`
+        weatherlocation.innerHTML = `${location}`
     })
 }
 

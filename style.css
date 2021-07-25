@@ -80,21 +80,33 @@ span:active{
     text-align: center;
     position: absolute;
     top: 750px;
-    left: 390px
-    
+    left: 390px;
 }
 
-.containerTwo{
-
+.weather-container{
+    display: inline-block;
+    position: absolute;
+    left: 133rem;
+    bottom: 64rem;  
 }
 
 #weatherdata{
-   position: relative;
-   bottom: 99px;
-   left: 647px;
-   font-size: 19px;
-   width: min-content;
-   }
-  
-    #weather-icon{
-    }
+    display: inline-block;  
+    position: relative;
+    font-size: 19px;
+}
+
+#weather-icon{
+    width: 40px;
+    margin-right: -4px;
+}
+
+#weather-location{
+    margin-top: -12px;
+    margin-right: -8px;
+    opacity: 0.69;
+}
+
+#temp{
+    font-size: 24px;
+}
