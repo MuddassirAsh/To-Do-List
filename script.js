@@ -81,13 +81,9 @@ document.body.addEventListener('click', removeButton)
 function checkLine(e) {
     if (e.target.checked == true) {
         e.target.previousElementSibling.previousElementSibling.style.textDecoration = 'line-through'
-        e.target.previousElementSibling.previousElementSibling.style.boxShadow =  '0 0 0 3px orange'
-        e.target.previousElementSibling.previousElementSibling.style.backgroundColor =  '#EE9AE5' // pick something later
     }
     else if (e.target.checked == false ){
         e.target.previousElementSibling.previousElementSibling.style.textDecoration = 'unset'
-        e.target.previousElementSibling.previousElementSibling.style.boxShadow =  'unset'
-        e.target.previousElementSibling.previousElementSibling.style.backgroundColor =  'unset'
     }
       
 }
@@ -138,8 +134,7 @@ const weatherlocation = document.getElementById('weather-location')
 function success(param) {
     var lat = param.coords.latitude
     var long = param.coords.longitude
-
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=498e78645413a462079b552fb2684491`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${process.env.API_KEY}`)
     .then(function(response){
         return response.json()
     })
@@ -156,8 +151,7 @@ function success(param) {
 navigator.geolocation.getCurrentPosition(success)   
 
 
-//'https://openweathermap.org/img/wn/50n@2x.png' alt='Weather Icon'
-
+ 
 
 // --------------- Tasks Still Needing To Be Completed --------------- 
 
