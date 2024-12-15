@@ -18,10 +18,7 @@ function addButton() {
 
     localStorage.setItem('numb', numb)    
     inputElement.setAttribute('dataset-numb', parseInt(localStorage.getItem('numb')))
-    numb = parseInt(localStorage.getItem('numb')) + 1
-
-    // localStorage --> numb, 0 | 
-    
+    numb = parseInt(localStorage.getItem('numb')) + 1    
 
     const checkBox = document.createElement('input')
     checkBox.type = 'checkbox'
@@ -148,47 +145,4 @@ function success(param) {
     })
 }
 
-navigator.geolocation.getCurrentPosition(success)   
-
-
- 
-
-// --------------- Tasks Still Needing To Be Completed --------------- 
-
-
-// add nightmode 
-// understanding this in annoymous
-// validating userinput (prohibiting submissions with no text, maybe?)
-// URL blocker
-// Po Moderio timer
-// api  
-// demotivating quotes on the bottom
-// notes section/diary for users to enter shit
-// remembering user information through storing local sessions on the browser
-// open weather api
-
-
-// Issues with localStorage
-
-// I have the keys and the values
-// Now I need to be able to output them when user refreshers or exits  the page     
-// what is windows.localStorage.myitems = asdasdada
-
-
-
-//rest ful api ideas
-//shit politicans say
-// anime wallpaper or quotes
-// uninspiring quotes
-// understanding tihs keyword
-
-
-// open weather API
-// theysaidso API
-
-// Philospher quotes API or Anime API or past presidents quotes
-
-// how long does it take  create a curated listed of quotes is it manually done?
-
-// promises and callback functions 
-// add media queries for dark mode
+navigator.geolocation.getCurrentPosition(success)
